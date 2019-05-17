@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <title>宫格</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style:none;
+        }
+        ul.box{
+            width: 1200px;
+            height: auto;
+            background-color: #493af5;
+            margin: 20px auto;
+            overflow: hidden;
+        }
+        .box > Itm{
+            width: 299px;
+            height: 299px;
+            float: left;
+            border-right: 1px solid #009966;
+            border-bottom: 1px solid #009966;
+        }
+        .box > .3{
+            border-right:  none;
+        }
+    </style>
+</head>
+<body>
+<ul class="box">
+    <li class="Itm"></li>
+    <li class="Itm"></li>
+    <li class="Itm 3"></li>
+    <li class="Itm"></li>
+    <li class="Itm"></li>
+    <li class="Itm"></li>
+    <li class="Itm"></li>
+    <li class="Itm"></li>
+    <li class="Itm"></li>
+    <li class="Itm"></li>
+    <li class="Itm"></li>
+    <li class="Itm"></li>
+</ul>
+</body>
+</html>
