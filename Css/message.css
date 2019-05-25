@@ -1,0 +1,310 @@
+/*默认样式设置*/
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, textarea, form, input, select{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+body{
+    color: white;
+    background: #d7fdff;
+    font: 15px "Microsoft YaHei", Arial, Helvetica, sans-serif;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+
+
+/*顶部导航栏*/
+.header{
+    width: 100%;
+    height: 60px;
+    background-color: black;
+}
+.header a{
+    color:aliceblue;
+}
+.header-box{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    line-height: 60px;
+    background-color: black;
+}
+.header-box h1{
+    height:100%;
+    font-size: 26px;
+    margin-right: 75px;
+    float: left;
+    font-weight: normal;
+    background-color: black;
+}
+.nav li{
+    height: 100%;
+    float: left;
+    margin-right: 35px;
+}
+.nav li a:hover{
+    color:#00c1de;
+}
+.nav{
+    height:100%;
+    font-size: 15px;
+    float: left;
+    background: black;
+}
+.search{
+    width: 100px;
+    height:60px;
+    background: black;
+    float: left;
+}
+
+/*content*/
+.content{
+    width: 1200px;
+    height: 900px;
+    background: white;
+    margin: 20px auto;
+    border-radius: 5px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.content .title:hover::before{
+    width: 100px;
+    transition:all .5s;
+}
+.content .title{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    color: black;
+    border-bottom: 1px solid #eeeeee;
+    margin: 0 auto;
+    position: relative;
+    font-size: 18px;
+}
+.content .title::before{
+    display: block;
+    content: '';
+    width: 80px;
+    height: 2px;
+    background: #1C2327;
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+    transition: all .5s linear;
+}
+.content p{
+    color: black;
+    height: 20px;
+    margin: 10px 0;
+}
+.content textarea{
+    width: 1150px;
+    height: 180px;
+    border: 1px solid rgba(214, 192, 213, 0.7);
+}
+.content .submit{
+    height:80px;
+    width: 100%;
+}
+.content .submit input{
+    display: block;
+    height:40px;
+    width: 60px;
+    background: black;
+    float: right;
+    margin: 20px;
+    border-radius: 5px;
+    color: white;
+    line-height: 40px;
+    text-align: center;
+}
+.content .message{
+    width: 1160px;
+    height: 105px;
+    border-bottom: 1px solid #eeeeee;
+}
+.content .message img{
+    width: 50px;
+    height: 50px;
+    margin: 20px 20px ;
+}
+.content .message .content{
+    float: right;
+    width: 1050px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+}
+.content .huifu{
+    height: 40px;
+    border-bottom: 1px solid #eeeeee;
+}
+.content .huifu p{
+    margin: 10px;
+    background: rgba(172,215,255,0.22);
+    padding: 5px
+}
+.content .huifu p span{
+    color: red;
+}
+
+/*footer*/
+.footer{
+    width: 100%;
+    height: 190px;
+    border-top: 10px solid #5db2ff;
+    background: #1C2327;
+}
+.footer .text{
+    width: 100%;
+    height: 120px;
+    margin: 30px auto;
+}
+.footer .text .wx-img{
+    width: 250px;
+    height: 120px;
+    margin: 0 100px;
+    float: left;
+}
+.footer .text .wx-img li{
+    float: left;
+    margin-right: 20px;
+}
+.footer .text .wx-img img{
+    width: 100px;
+    height: 100px;
+}
+.footer .text .wx-img span{
+    display: block;
+    margin-left: 10px;
+}
+.footer .text p:nth-child(2){
+    display: block;
+    width: 1300px;
+    height: 25px;
+    color: #7f91ff;
+    margin-top: 10px;
+    text-align: left;
+}
+.footer .text p:nth-child(3){
+    display: block;
+    width: 1300px;
+    height: 25px;
+    color: white;
+    margin-top: 5px;
+}
+.footer .text p:nth-child(4){
+    display: block;
+    width: 1300px;
+    height: 25px;
+    color: white;
+    margin-top: 5px;
+}
+.footer .top{
+    width: 34px;
+    height: 34px;
+    background: url("../image/top.png") black center ;
+    display: block;
+    position: fixed;
+    right: 20px;
+    bottom: 20%;
+}
+/*加载logo*/
+.loader {
+    width: 150px;
+    height: 150px;
+    background: aliceblue;
+    background: radial-gradient(aliceblue, azure);
+    bottom: 0;
+    overflow: hidden;
+    position: fixed;
+    right:10%;
+    z-index: 99999;
+}
+
+.loader-inner {
+    bottom: 0;
+    height: 60px;
+    left: 0;
+    margin: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100px;
+}
+
+.loader-line-wrap {
+    animation:
+            spin 2000ms cubic-bezier(.175, .885, .32, 1.275) infinite
+;
+    box-sizing: border-box;
+    height: 50px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    transform-origin: 50% 100%;
+    width: 100px;
+}
+.loader-line {
+    border: 4px solid transparent;
+    border-radius: 100%;
+    box-sizing: border-box;
+    height: 100px;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 100px;
+}
+.loader-line-wrap:nth-child(1) { animation-delay: -50ms; }
+.loader-line-wrap:nth-child(2) { animation-delay: -100ms; }
+.loader-line-wrap:nth-child(3) { animation-delay: -150ms; }
+.loader-line-wrap:nth-child(4) { animation-delay: -200ms; }
+.loader-line-wrap:nth-child(5) { animation-delay: -250ms; }
+
+.loader-line-wrap:nth-child(1) .loader-line {
+    border-color: hsl(0, 80%, 60%);
+    height: 90px;
+    width: 90px;
+    top: 7px;
+}
+.loader-line-wrap:nth-child(2) .loader-line {
+    border-color: hsl(60, 80%, 60%);
+    height: 76px;
+    width: 76px;
+    top: 14px;
+}
+.loader-line-wrap:nth-child(3) .loader-line {
+    border-color: hsl(120, 80%, 60%);
+    height: 62px;
+    width: 62px;
+    top: 21px;
+}
+.loader-line-wrap:nth-child(4) .loader-line {
+    border-color: hsl(180, 80%, 60%);
+    height: 48px;
+    width: 48px;
+    top: 28px;
+}
+.loader-line-wrap:nth-child(5) .loader-line {
+    border-color: hsl(240, 80%, 60%);
+    height: 34px;
+    width: 34px;
+    top: 35px;
+}
+
+@keyframes spin {
+    0%, 15% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
