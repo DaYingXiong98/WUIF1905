@@ -105,6 +105,10 @@ a{
     height: 180px;
     border: 1px solid rgba(214, 192, 213, 0.7);
 }
+.content img{
+    width: 30px;
+    height: 30px;
+}
 .content .submit{
     height:80px;
     width: 100%;
@@ -204,15 +208,6 @@ a{
     height: 25px;
     color: white;
     margin-top: 5px;
-}
-.footer .top{
-    width: 34px;
-    height: 34px;
-    background: url("../image/top.png") black center ;
-    display: block;
-    position: fixed;
-    right: 20px;
-    bottom: 20%;
 }
 /*加载logo*/
 .loader {
