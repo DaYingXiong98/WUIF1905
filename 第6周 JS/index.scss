@@ -1,0 +1,35 @@
+$color:red;
+$width:600px;
+.box{
+  width: 300px;
+  height: 300px;
+  background-color: $color;
+}
+.ooo{
+  width: $width;
+}
+>li{
+  width: 100px;
+  a{
+    width: 100px;
+    p{
+      width: 100px;
+    }
+  }
+}
+
+@for $i from 1 to 10{
+  .col-#{$i}{
+    width: $i / 10 * 100%;
+  }
+}
+p{
+
+}
+$bg:1s 2s 3s 4s 5s 6s 7s 8s;
+@each $i in $bg{
+  .#{i}{
+    color: #12b7de;
+    background-image: url("./imgs/#{$i}.jpg");
+  }
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>选择器</title>
+    <script src="./jquery-3.4.1.js"></script>
+</head>
+<body>
+<h1 id="1">Jquery</h1>
+<ul>
+    <li>假面骑士Kugga</li>
+    <li>假面骑士Agito</li>
+</ul>
+<ul>
+    <span>O'S</span>
+    <li>假面骑士Faiz</li>
+    <li>假面骑士Kiva</li>
+</ul>
+<input type="text">
+<script>
+    $(function () {
+        console.log($('#1'));
+        console.log(1);
+        $('li:first-child');
+        $('span:only-of-type').css({backgroundColor:'red',borderRadius:'10%',opacity:'0.7'});
+        $(':input').css({backgroundColor:'blue',borderRadius:'10%',opacity:'0.3'})
+        $(':input').css
+    })
+</script>
+</body>
+</html>

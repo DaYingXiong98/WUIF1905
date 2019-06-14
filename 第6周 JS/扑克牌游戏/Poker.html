@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../jquery-3.4.1.js"></script>
+    <script src="Poker.js"></script>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    .Pad{
+        height: 800px;
+        width: 1000px;
+        border-radius: 10px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        background-color: rgba(0,193,222,0.6);
+    }
+    .Poke{
+        width: 90px;
+        height: 120px;
+        border-radius: 3px;
+        background-color: #3ff9dc;
+        position: absolute;
+        left: 350px;
+        top: 0;
+        opacity: 0;
+        background-size: cover;
+        background-position: center;
+    }
+    .active{
+        border-color: #FF0000;
+    }
+    button{
+        width: 70px;
+        height: 30px;
+        border: none;
+        outline: none;
+        background-color: #3ff9dc;
+        color: aliceblue;
+        border-radius: 5px;
+        position: absolute;
+        left: 450px;
+        bottom: 30px;
+    }
+
+</style>
+<body>
+<div class="Pad" data-age="18">
+    <button class="right">
+        &gt;
+    </button>
+
+</div>
+</body>
+</html>
