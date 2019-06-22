@@ -5,7 +5,7 @@ $(function () {
     let flag = {};
     let Pad = $('.Pad');
 
-
+    //产生扑克牌
     for (let i = 0; i < 52; i++) {
         let index = Math.floor(Math.random() * colorArr.length);
         let color = colorArr[index];
@@ -17,8 +17,8 @@ $(function () {
             number = Math.round(Math.random() * 12 + 1);
         }
 
-    Poker.push({color, number});
-    flag[color+'_'+number] = true;
+        Poker.push({color, number});
+        flag[color+'_'+number] = true;
     }
     console.log(Poker);
 
@@ -53,7 +53,7 @@ $(function () {
             .delay(index*120)
             .animate({left:lefts,top:550,opacity:1})
     }
-    // 选出牌
+    // 牌定位
     let first = null;
     Pad.on('click','.Poke',function () {
 

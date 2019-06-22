@@ -1,4 +1,5 @@
 $(function () {
+    // 定义
     let rightBtn = $('.right-button');
     let imgl = $('.lun-img > li');
     let bannerList = $('.button-list > li')

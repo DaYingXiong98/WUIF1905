@@ -5,6 +5,7 @@ $(function () {
     let black = {} ,white = {};
     let blank = {};
     let ai = true;
+    // 生棋盘
     for (let i=0;i<25;i++){
         for (let j=0;j<25;j++){
             $('<div>').addClass('chess').attr('id',i+'_'+j).appendTo(box);
