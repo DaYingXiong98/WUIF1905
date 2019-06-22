@@ -37,6 +37,6 @@ $(function () {
     bannerList.mouseenter(function () {
         t = setInterval(function () {
             rightBtn.triggerHandler('click')
-        },2000);
+        },3000);
     });
 });

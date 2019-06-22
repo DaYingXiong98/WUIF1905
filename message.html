@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>留言</title>
     <link rel="stylesheet" href="Css/message.css">
+    <script src="js/jquery-3.4.1.js"></script>
 </head>
 <body>
 <div class="header">
@@ -24,6 +25,7 @@
 <div class="content">
     <div class="title">留言</div>
     <p style="font-weight: bold">来说点什么吧</p>
+    <form action="">
     <p>您的姓名：<input type="text">&nbsp;*</p>
     <p>选择头像：*</p>
     <img src="./Image/11.jpg" alt="">
@@ -34,31 +36,13 @@
     <img src="./Image/06.jpg" alt="">
     <img src="./Image/07.jpg" alt="">
     <img src="./Image/08.jpg" alt="">
-    <p>留言内容：</p>
-    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <p>留言内容：当前已经填入:<span id="num"></span></p>
+    <textarea name="lytext" id="lytext" cols="60" rows="12" maxlength="100" placeholder="最多输入100字"></textarea>
     <div class="submit">
         <input type="submit" value="提交">
     </div>
-        <div class="message">
-        <img src="./Image/13.jpg" alt="">
-        <div class="content">
-            <p>GAGW</p>
-            <p>wdnmd</p>
-        </div>
-    </div>
-    <div class="huifu">
-        <p><span>站长回复：</span>谢谢</p>
-    </div>
-    <div class="message">
-        <img src="./Image/12.jpg" alt="">
-        <div class="content">
-            <p>SAGG</p>
-            <p>亲 五星好评呦！</p>
-        </div>
-    </div>
-    <div class="huifu">
-        <p><span>站长回复：</span>谢谢</p>
-    </div>
+    </form>
+
 </div>
 
 <a href="">
@@ -82,5 +66,6 @@
         </div>
     </div>
 </a>
+<script src="js/message.js"></script>
 </body>
 </html>

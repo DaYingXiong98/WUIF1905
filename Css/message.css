@@ -108,6 +108,7 @@ a{
 .content img{
     width: 30px;
     height: 30px;
+    opacity: 0.6;
 }
 .content .submit{
     height:80px;

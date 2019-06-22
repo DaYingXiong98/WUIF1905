@@ -1,5 +1,5 @@
 body {
-  background-color: #e40d7d; }
+  background-color: rgba(127,255,212,0.2); }
 
 .box {
   width: 1000px;
@@ -14,7 +14,7 @@ body {
 .heng {
   width: 960px;
   height: 1px;
-  background-color: bisque;
+  background-color: black;
   position: absolute;
   left: 20px;
   transform: translate3d(-300%, 0, 0);
@@ -23,7 +23,7 @@ body {
 .shu {
   height: 961px;
   width: 1px;
-  background-color: bisque;
+  background-color: black;
   position: absolute;
   top: 20px;
   transform: translate3d(0, -300%, 0);
