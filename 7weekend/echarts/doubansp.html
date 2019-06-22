@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>豆瓣散点图</title>
+    <script src="echarts.min.js"></script>
+    <script src="data.js"></script>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    html , body{
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+    }
+    .contain{
+        height: 80%;
+        width: 80%;
+        border-radius: 5px;
+        padding: 50px;
+        background-color: rgba(127,255,212,0.2);
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+</style>
+<body>
+<div class="contain">
+
+</div>
+<script>
+    let douban = echarts.init(document.querySelector('.contain'));
+    let selected = {};
+    let series = [];
+
+    // 电影类别
+    categories.forEach(category=>{
+       let movies = data.filter(ele=>ele[4].includes(category));
+
+       if (category == '全部'){
+           selected[category] = true;
+       } else {
+           selected[category] = false;
+       }
+
+       let obj = {
+           name:category,
+           data: category == '全部'?data:movies,
+           type:'scatter',
+           symbolSize:function (data) {
+              return Math.ceil(data[2]/10)
+           },
+           label: {
+               emphasis: {
+                   show: true,
+                   formatter: function (param) {
+                       return param.data[3];
+                   },
+                   position: 'top'
+               }
+           }
+       };
+
+       series.push(obj)
+    });
+
+
+    let doubanOption = {
+        // backgroundColor: new echarts.graphic.RadialGradient(0.3, 0.3, 0.8, [{
+        //     offset: 0   ,
+        //     color: '#f7f8fa'
+        // }, {
+        //     offset: 1,
+        //     color: '#cdd0d5'
+        // }]),
+        title: {
+            top:'bottom',
+            textStyle:{
+                fonStyle:'italic',
+                fontSize:'25'
+            },
+            text: '豆瓣电影TOP250榜单'
+        },
+        xAxis: {
+            name:'参与评分人数',
+            splitLine: {
+                lineStyle: {
+                    type: 'dashed'
+                }
+            }
+        },
+        yAxis: {
+            name:'电影评分',
+            splitLine: {
+                lineStyle: {
+                    type: 'dashed'
+                }
+            },
+            scale: true
+        },
+        legend:{
+            type:'scroll',
+            data:categories,
+            selected,
+            selectedMode:'single'
+        },
+        tooltip : {
+            trigger: 'item',
+            textStyle:{
+                fontWeight:'bold'
+            },
+            formatter: function (params) {
+                let data = params.data;
+                return `名字:${data[3]}<br>
+                        类型:${data[4]}<br>
+                        时长:${data[2]}
+                `
+            }
+        },
+        series
+    };
+
+    douban.setOption(doubanOption);
+</script>
+</body>
+</html>

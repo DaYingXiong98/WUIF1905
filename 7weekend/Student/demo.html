@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>测试两种删除</title>
+    <script src="js/jquery-3.4.1.js"></script>
+</head>
+<style>
+    div{
+        width: 400px;
+        height: 400px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+    }
+    ul , ol{
+        width: 300px;
+        height: 150px;
+        border: 1px solid #3ff9dc;
+    }
+    .hot{
+        background-color: #00C1DE;
+    }
+</style>
+<body>
+<div>
+<ul>
+    <li>01</li>
+    <li>02</li>
+    <li>03</li>
+</ul>
+<ol>
+
+</ol>
+</div>
+<script>
+    $(function () {
+        let lis = $('li');
+        lis.hover(function () {
+            $(this).toggleClass('hot');
+            }
+        )
+    })
+</script>
+</body>
+</html>

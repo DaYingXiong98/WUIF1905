@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>摩尔斯电码</title>
+</head>
+<body>
+<ul>
+
+</ul>
+<script>
+    let xml = new XMLHttpRequest();
+    xml.open('get','./Morse.txt',true);
+    xml.send();
+    console.log(1);
+    xml.onreadystatechange = function () {
+        if (xml.readyState === 4){
+            if (xml.status === 200){
+                console.log(xml.response);
+                console.log(4);
+                let data = JSON.parse(xml.response);
+                let html = '';
+                data.forEach(ele=>{
+                    html +=`
+                    <li><p>${ele.title}</p><p>${ele.time}</p></li>
+                    `
+            });
+                ul.innerHTML = html;
+            }
+        }
+    };
+    console.log(2);
+</script>
+</body>
+</html>

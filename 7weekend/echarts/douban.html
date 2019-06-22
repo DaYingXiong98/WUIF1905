@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>豆瓣250榜单</title>
+    <script src="echarts.min.js"></script>
+    <script src="data.js"></script>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    html , body{
+        overflow: hidden;
+        height: 100%;
+        width: 100%;
+    }
+    .contain{
+        height: 80%;
+        width: 80%;
+        padding: 50px;
+        background-color: rgba(127,255,212,0.2);
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+</style>
+<body>
+<div class="contain"></div>
+<script>
+    let douban = echarts.init(document.querySelector('.contain'));
+
+    let doubanOption = {
+        tooltip : {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {c} ({d}%)"
+        },
+        title: {
+            text: '豆瓣电影榜单',
+            left: 'center',
+            top: 20,
+            textStyle: {
+                color: '#ccc'
+            }
+        },
+        series : [
+            {
+                name: '访问来源',
+                type: 'pie',
+                radius: '55%',
+                center: ['50%', '50%'],
+                data: [
+
+                ],
+            }],
+    };
+    // 统计分类
+    let arr =[];
+    for (let i=0;i<categories.length;i++){
+        let name = categories[i];
+        let value = data.filter(ele=>ele[4].includes(name)).length;
+        arr.push({name,value});
+
+        doubanOption.series[0].data = arr;
+
+    }
+
+    douban.setOption(doubanOption);
+</script>
+</body>
+</html>
